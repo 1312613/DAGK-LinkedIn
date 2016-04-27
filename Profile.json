@@ -1,0 +1,20 @@
+{
+    "account": {
+        "Name" : "Cao Thái Toại",
+        "Position" : "Student",
+        "Company" : "VNUHCMU - University of Sciences",
+        "ID" : "1312613",
+        "Address" : "300/34/18/7A NGuyễn Văn Linh, phường Bình Thuận, quận 7, TPHCM",
+        "DateOfBirth": "05/12/1995",
+        "Email": "cttoaihcmus@gmail.com",
+        "Phone": "01685954603"     
+    },
+    
+    "Background":{
+        "Summary": "A handsome boy from ITUS <3",
+        "Experience": "VNUHCM - University of Sciences (2 years 9 months, 1 Project)",
+        "Project": "Calculator for Android",
+        "Education": "2013-2017: VNUHCM - University of Sciences",
+        "Skill": ""
+    }
+}
