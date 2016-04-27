@@ -7,7 +7,12 @@
         
     </head>
     
-    <body>
+    <body ng-app="app">
+        <!--Script-->
+        <script src="js/angular.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/profile.module.js"></script>
+        <script src="js/profile.controller.js"></script>
         <div class="header">
             <img src="image/icon.png" alt="iconLinkedin">
         </div>
@@ -19,46 +24,47 @@
             <div class="avatar">
                  <img src="image/avatar.jpg" alt="avatar">
             </div>
-            <div class="CTT">
-                 <h1>Cao Thái Toại</h1> 
-                 <h3 style="color: red">VNUHCM - University of Sciences</h3>
-                 <h3>1312613</h3>
-                 <h3>Địa chỉ: 300/34/18/7A NGuyễn Văn Linh, phường Bình Thuận, quận 7, TPHCM</h3>
-                 <h3>Ngày sinh: 05/12/1995</h3>
-                 <h3>Email: cttoaihcmus@gmail.com</h3>
-                 <h3>Phone: 01685954603</h3>
-            </div>>
+            <div class="CTT" ng-controller="ProfileController as vm">
+                 <h1>{{vm.account.Name}}</h1>
+                 <h3 style="color: red">{{vm.account.Position}}</h3>
+                 <h3 style="color: red">{{vm.account.Company}}</h3>
+                 <h3>{{vm.account.ID}}</h3>
+                 <h3>Địa chỉ: {{vm.account.Address}}</h3>
+                 <h3>Ngày sinh: {{vm.account.DateOfBirth}}</h3>
+                 <h3>Email: {{vm.account.Email}}</h3>
+                 <h3>Phone: {{vm.account.Phone}}</h3>
+            </div>
         </div>
-        <div class="Background">
+        <div class="Background" ng-controller="ProfileController as vm">
             <h2>Background:</h2>
             <div class="Summary">
                 <h2>Summary:</h2>
-                <h3>A handsome boy from ITUS <3 </h3>           
+                <h3>{{vm.Background.Summary}} </h3>           
             </div>
             <div class="Experience">
                 <h2>Experience:</h2>
-                <h3>VNUHCM - University of Sciences (2 years 9 months, 1 Project)</h3>           
-                <h3>Add an experience...</h3>
+                <h3>{{vm.Background.Experience}}</h3>           
             </div>
         
             <div class="Projects">
                 <h2>Projects:</h2>
-                <h3>Calculator for Android</h3>
-                <h3>Add a project...</h3>
+                <h3>{{vm.Background.Project}}</h3>
             </div>
             
             <div class="Education">
                 <h2>Education:</h2>
-                <h3>2013-2017: VNUHCM - University of Sciences</h3>
-                <h3>Add an education...</h3>
+                <h3>{{vm.Background.Education}}</h3>
             </div>
         
             <div class="Skills">
                 <h2>Skills:</h2>
-                <h3>Add a skill...</h3>
+                <h3>{{vm.Background.Skill}}</h3>
             </div>
         
             
         </div>
+        
+        
+        
    </body>
 </html>
