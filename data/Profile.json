@@ -1,20 +1,83 @@
 {
-    "account": {
-        "Name" : "Cao Thái Toại",
-        "Position" : "Student",
-        "Company" : "VNUHCMU - University of Sciences",
-        "ID" : "1312613",
-        "Address" : "300/34/18/7A NGuyễn Văn Linh, phường Bình Thuận, quận 7, TPHCM",
-        "DateOfBirth": "05/12/1995",
-        "Email": "cttoaihcmus@gmail.com",
-        "Phone": "01685954603"     
+    "info":
+    {
+        "name":"Cao Thái Toại",
+        "school":"VNUHCM - University of Sciences",
+        "workplace":"Faculty Of Information Technology | HCMUS",
+        "Address":"300/34/18/7A Nguyễn Văn Linh, Bình Thuận district, Hồ Chí Minh city",
+        "dateofbirth":"05/12/1995",
+        "relationship": "I'm available"
     },
-    
-    "Background":{
-        "Summary": "A handsome boy from ITUS <3",
-        "Experience": "VNUHCM - University of Sciences (2 years 9 months, 1 Project)",
-        "Project": "Calculator for Android",
-        "Education": "2013-2017: VNUHCM - University of Sciences",
-        "Skill": ""
+    "contact":
+    {
+        "linkedIn":"vn.linkedin.com/in/cttoai0512",
+        "facebook":"https://facebook.com/michaeltllq",
+        "gmail":"cttoaihcmus@gmail.com"
+    },
+    "background":
+    {
+        "summary":{
+            "current":"Student At HCM University Of Science",
+            "target":"Want to be a developer or singer!",
+            "strongPoint":"Seft-study, work in groups"
+        },
+        "experience":
+        [
+            {
+                "position":"Freelancer",
+                "company":"No",
+                "timestart":"2016",
+                "timeend":"Up to now",
+                "content":"Web, Android Application projects in my school"
+            }
+        ],
+        "project":
+            [
+                {
+                    "name":"Minesweeper",
+                    "time":"2013",
+                    "language":"C/C++"   
+                },
+                {
+                    "name":"Gomoku Online, My Paint",
+                    "time":"2015",
+                    "language":"WPF"
+                },
+                {
+                    "name":"Calculator",
+                    "time":"2016",
+                    "language":"Android"
+                }
+            ],
+        "skill":
+            [
+                {
+                    "name":"C",
+                    "target":"69"
+                },
+                {
+                    "name":"C++/C#",
+                    "target":"69"
+                },
+                {
+                    "name":"Android",
+                    "target":"69"
+                },
+                {
+                    "name":"HTML/CSS",
+                    "target":"69"
+                }
+            ],
+        "education":
+        [
+            {
+                "school":"Ben Tre High School for Gifted Students, Ben Tre city",
+                "Time":"2010-2013"
+            },
+            {
+                "school":"VNUHCM - University of Sciences, Dictrict 5, HCM city",
+                "Time":"2013-2017"
+            }
+        ]
     }
 }
