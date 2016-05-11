@@ -5,9 +5,16 @@
         .module('app-contact')
         .controller('ContactController', ContactController);
 
-    ContactController.$inject = ['$http','$scope'];
-    function ContactController($http,$scope) {
+    ContactController.$inject = ['$scope','$firebaseObject', '$firebaseArray'];
+    function ContactController($scope,Object,$firebaseArray) {
         var vm = this;
+        var Firebaseref = new Firebase("https://shining-inferno-4286.firebaseio.com/");
+
+        var obj = Object(Firebaseref);
+
+        obj.$bindTo($scope, 'data').then(function () {
+                vm.contact= $scope.data.contact;
+        })
         vm.contact = {};
         
         vm.IsHide = [true,true,true,true]; //0:facebook 1:gmail 2:linkedIn 3:ShowSpecificContact
@@ -21,16 +28,11 @@
         vm.SubmitLinkedIn = SubmitLinkedIn;
         
         
-        activate();
+
         
         ////////////////
 
-        function activate() {
-            $http.get('data/profile.json').then(function(response) {
-                vm.contact = response.data.contact;
-            })
-            
-         }
+        
          function Hide(index){
             vm.IsHide[index] = !vm.IsHide[index];
         }

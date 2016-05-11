@@ -5,11 +5,18 @@
         .module('app-profile')
         .controller('ProfileController',ProfileController);
 
-    ProfileController.$inject = ['$http','$scope'];   
-    function ProfileController($http,$scope) {
-        window.SC = $scope;
+    ProfileController.$inject = ['$scope','$firebaseObject', '$firebaseArray'];   
+    function ProfileController($scope,Object,$firebaseArray) {
+        
         var vm = this;
-                
+        var Firebaseref = new Firebase("https://shining-inferno-4286.firebaseio.com/");
+
+        var obj = Object(Firebaseref);
+
+        obj.$bindTo($scope, 'data').then(function () {
+        vm.profile=$scope.data.info;
+        })
+        
         vm.profile = {};
         
         vm.IsHide = [true,true,true,true,true,true];
@@ -28,16 +35,7 @@
         vm.SubmitDateOfBirth = SubmitDateOfBirth;
         vm.SubmitRelationship = SubmitRelationship;
         
-        activate();
-        
-        ////////////////    
 
-        function activate() {
-            $http.get('data/profile.json').then(function(response){
-                vm.profile = response.data.info;
-            })
-        }
-        
         function Hide(index){
             vm.IsHide[index] = !vm.IsHide[index];
         }
@@ -97,15 +95,6 @@
             vm.profile.relationship = vm.ChangeRelationship();
             vm.IsHide[5] = !vm.IsHide[5];
         }
-       /* $scope.ChangeName = function(){
-            var firstname = $scope.firstname;
-            var lastname = $scope.lastname;
-            return (firstname + lastname);
-        } */
-        
-        /*$scope.Submit = function(){
-            vm.profile.fullname = $scope.ChangeName();
-            vm.IsHide = !vm.IsHide;
-        }*/
+       
     }
 })();

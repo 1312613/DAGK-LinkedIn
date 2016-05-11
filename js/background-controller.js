@@ -5,20 +5,20 @@
         .module('app-background')
         .controller('BackgroundController', BackgroundController);
 
-    BackgroundController.$inject = ['$http','$scope'];
-    function BackgroundController($http,$scope) {
+    BackgroundController.$inject = ['$scope','$firebaseObject', '$firebaseArray'];
+    function BackgroundController($scope,Object,$firebaseArray) {
         var vm = this;
         vm.background = {};
-        
-        activate();
+        var Firebaseref = new Firebase("https://shining-inferno-4286.firebaseio.com/");
+
+        var obj = Object(Firebaseref);
+
+        obj.$bindTo($scope, 'data').then(function () {
+                vm.background= $scope.data.background;
+        })
+
         vm.LoadData = LoadData;
         ////////////////
-
-        function activate() {
-            $http.get('data/profile.json').then(function(response){
-                vm.background = response.data.background            
-            })
-        }
         
         //Load data from dialog form
         function LoadData(string){
