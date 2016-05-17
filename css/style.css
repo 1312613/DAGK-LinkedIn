@@ -1,301 +1,151 @@
-.header{
-    height: 70px;
-    
-    background: rgba(76,76,76,1);
-    background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(0,0,0,1) 0%, rgba(102,102,102,1) 30%, rgba(71,71,71,1) 48%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76,76,76,1)), color-stop(0%, rgba(0,0,0,1)), color-stop(30%, rgba(102,102,102,1)), color-stop(48%, rgba(71,71,71,1)), color-stop(76%, rgba(43,43,43,1)), color-stop(91%, rgba(28,28,28,1)), color-stop(100%, rgba(19,19,19,1)));
-    background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(0,0,0,1) 0%, rgba(102,102,102,1) 30%, rgba(71,71,71,1) 48%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
-    background: -o-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(0,0,0,1) 0%, rgba(102,102,102,1) 30%, rgba(71,71,71,1) 48%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
-    background: -ms-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(0,0,0,1) 0%, rgba(102,102,102,1) 30%, rgba(71,71,71,1) 48%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
-    background: linear-gradient(to bottom, rgba(76,76,76,1) 0%, rgba(0,0,0,1) 0%, rgba(102,102,102,1) 30%, rgba(71,71,71,1) 48%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
+body {
+	background: url("../image/photo_bg.jpg") no-repeat center center fixed;
+	background-size: cover;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	margin: 0;
+	color: #666;
 }
 
-.header img{
-    width: 130px;
-    margin-top: -12px;
-    margin-left: 180px;
-    position: absolute;
+/* Typography */
+h1#title {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
+	font-size: 3.2em;
+	color: white;
+	text-shadow: 0 0 10px rgba(0,0,0,0.8);
+	margin: 0 auto;
+	padding-top: 180px;
+	max-width: 300px;
+	text-align: center;
+	position: relative;
+	top: 0px;
 }
 
-.cover img{
-    height: 300px;
-    width: 100%;
-    position: relative;
-	display: inline-block;
+h1#title span span {
+	font-weight: 400;
 }
 
-.editCover {
-	padding-top: 150px;	
-	padding-right: 620px;
-	position: absolute;
-	right: 0;
-	top: 0;
-	display: none;
-    font-size: 50px;
-    color: dodgerblue;
+h2 {
+	text-transform: uppercase;
+	color: white;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-size: 1.4em;
+	line-height: 2.8em;
 }
 
-.btn-edit-cover{
-    background: transparent;
-    font-size: 50px;
+a {
+	text-decoration: none;
+	color: #666;
 }
 
-.cover:hover .editCover {
-	display: block;
+a:hover {
+	color: #aeaeae;
 }
 
-.MyLinkedin{
-    background-color: lightgray;
-}
-
-.Profile{
-    width: 80%;
-    border: solid 1px black;
-    padding-left: 0px;
-    padding-right: 0px;
-    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
-}
-
-.Profile-info{
-    background-color: white;
-    margin-top: -80px;
-}
-
-.Profile-info:hover .editButton{
-    display: block;
-}
-
-.Profile-info:hover .btnContact{
-    display: block;
-    margin-left: -88px;
-}
-
-.edit h3{
-    margin-top: -2px;
-    color: white;
-}
-
-.edit h4{
-    margin-top: -2px;
-    color: white;
-}
-
-.edit:hover{
-    cursor: pointer;
-}
-
-.editButton{
-    display: none;
+p.small {
+	font-size: 0.8em;
+	margin: 20px 0 0;
 }
 
 
-
-.edit-form{
-    position: absolute;
-    margin-left: 200px;
+/* Layout */
+.container {
+	margin: 0;
 }
 
-
-.col-md-1{
-    padding: 0px;
+.top {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }
 
-.col-md-2 h6{
-    color: darkgray;
+.login-box {
+	background-color: white;
+	max-width: 340px;
+	margin: 0 auto;
+	position: relative;
+	top: 80px;
+	padding-bottom: 30px;
+	border-radius: 5px;
+	box-shadow: 0 5px 50px rgba(0,0,0,0.4);
+	text-align: center;
 }
 
-.col-md-3{
-    padding: 0px;
-}
-.col-md-3 img{
-    height: 300px;
-}
-
-.col-md-5{
-    padding: 0px;
+.login-box .box-header {
+	background-color: #665851;
+	margin-top: 0;
+	border-radius: 5px 5px 0 0;
 }
 
-.col-md-6 h5{
-    color: gray;
-    margin-top: 10px;
+.login-box label {
+	font-weight: 700;
+	font-size: .8em;
+	color: #888;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	line-height: 2em;
 }
 
-.col-md-7{
-    padding: 0px;
+.login-box input {
+	margin-bottom: 20px;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	font-size: .9em;
+	color: #888;
 }
 
-.col-md-8 h3:nth-child(1){
-    font-weight: bold;
+.login-box input:focus {
+	outline: none;
+	border-color: #665851;
+	transition: 0.5s;
+	color: #665851;
 }
 
-.btn-edit{
-    margin-left: 15px;
+.login-box button {
+	margin-top: 0px;
+	border: 0;
+	border-radius: 2px;
+	color: white;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 0.7em;
+	letter-spacing: 1px;
+	background-color: #665851;
+	cursor:pointer;
+	outline: none;
 }
 
-#btnCode{
-    margin-top:-5px;
-    margin-left: -50px;
+.login-box button:hover {
+	opacity: 0.7;
+	transition: 0.5s;
 }
 
-#btnWorkplace{
-    margin-left: -125px;
-    margin-top: -10px;
+.login-box button:hover {
+	opacity: 0.7;
+	transition: 0.5s;
 }
 
-.edit h5{
-    margin-top: -2px !important;
-    color: darkgray !important;
-    
+.selected {
+	color: #665851!important;
+	transition: 0.5s;
 }
 
-.Specific-Contact{
-    background-color: rgb(242,242,242);
-    height: 70px;
+/* Animation Delay */
+#logo {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 2s;
 }
 
-.background{
-    margin-top: 40px;
-    width: 80%;
-    background-color: white;
-    border: solid 1px black;
-    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
-}
-
-.container{
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-.Public-Contact{
-    border-top: dashed 1px black;
-}
-
-
-#contact-linked{
-    color: black;
-    margin-top: 10px !important;
-}
-
-.btnContact{
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
-}
-
-#contact-linked:hover{
-    color: dodgerblue;
-    cursor: pointer;
-}
-
-.shape{
-    background-color: black;
-    width: 105px;
-    margin-left: 15px;
-}
-
-.shape h5{
-    color: white;
-    font-weight: 520;
-}
-
-.img-background{
-    width: 45px;
-    margin-top: 25px;
-    margin-left: 35px;
-}
-
-.background-title{
-    margin-top: 25px;    
-}
-
-.edit-form{
-    position:absolute !important;
-    display: block;
-    margin-left: 260px;
-    margin-top: -30px;
-    border: 1px solid lightgray;
-    background: white;
-}
-
-.edit-code-form{
-    margin-left: 250px !important;
-}
-
-.form-inline button{
-    margin: 5px;
-}
-
-.form-inline input{
-    margin: 5px;
-    color: black;
-}
-
-
-#btnFacebook{
-    margin-top: 5px;
-    margin-left: -80px;
-    background: white;
-}
-
-#btnGmail{
-    margin-top: 5px;
-    margin-left: -80px;
-    background: white;
-}
-
-#btnLinkedIn{
-    margin-top: 1px;
-    margin-left: -120px;
-}
-
-.btn-circle{
-    width: 45px;
-    height: 45px;
-    text-align: center;
-    padding: 6px 0;
-    font-size: 20px;
-    line-height: 1.45;
-    border-radius: 30px;
-    background: transparent;
-}
-  
-
-.btn-circle:hover {
-    background:whitesmoke;
-}
-
-.dialog form{
-    text-align: center;
-}
-
-.dialog form input{
-    color: black;
-}
-
-.submit{
-    width:30%;
-    border:1px solid #59b4d4;
-    background:#0078a3;
-    color:#eee;
-    padding:3px 0;
-    border-radius:5px;
-    margin-top:10px;
-    cursor:pointer
-}
-
-.submit:hover {
-    border:1px solid #666;
-    background:#555;
-    color:#fff
-}
-.ui-dialog .ui-dialog-content {
-    padding:2em
+.login-box {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 1s;
 }
